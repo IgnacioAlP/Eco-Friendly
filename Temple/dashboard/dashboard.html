@@ -1,0 +1,396 @@
+{% extends 'maestra.html' %}
+
+{% block titulo %} Categorías {% endblock %}
+
+{% block tabla %}
+<style>
+    .card1{
+        max-width: 18rem; 
+        border-bottom: 12px solid rgba(108, 163, 177, 0.65);
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        background: rgb(108,163,177);
+        background: linear-gradient(0deg, rgba(108,163,177,0.65) 14%, rgba(255,252,252,1) 94%);
+    }
+    .card4{
+        max-width: 18rem; 
+        border-bottom: 12px solid rgba(108,119,177,0.65);
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        background: rgb(108,119,177);
+        background: linear-gradient(0deg, rgba(108,119,177,0.65) 14%, rgba(255,252,252,1) 94%);
+        
+    }
+    .card5{
+        max-width: 18rem; 
+        border-bottom: 12px solid rgba(168,51,55,0.65) ;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        background: rgb(168,51,55);
+        background: linear-gradient(0deg, rgba(168,51,55,0.65) 14%, rgba(255,252,252,1) 94%);
+    }
+    .card2{
+        max-width: 18rem; 
+        border-bottom: 5px solid rgba(0, 0, 0, 0.65);
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        
+    }
+    .card3{
+        max-width: 18rem; 
+        border-top: 12px solid rgba(87, 75, 75, 0.65);
+        border-bottom: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        
+    }
+
+</style>
+<div class="form-group d-flex col-sm-4   mb-2 mb-sm-0  col-md-4  col-lg-5">
+    <label for="year-select" class="my-2 me-3 form-label">Año:</label>
+    <select class="form-select  text-cente active" name="year" id="year-select">
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+    </select>
+    <label for="year-select " class="my-2 me-3 ms-4 form-label">Mes:</label>
+    <select class="form-select  text-cente active" name="year" id="year-select">
+        <option  value="vacio">------vacio------</option>
+        <option value="Enero">Enero</option>
+        <option value="Febrero">Febrero</option>
+        <option value="Marzo">Marzo</option>
+        <option value="Abril">Abril</option>
+        <option value="Mayo">Mayo</option>
+        <option value="Junio">Junio</option>
+        <option value="Julio">Julio</option>
+        <option value="Agosto">Agosto</option>
+        <option value="Septiembre">Septiembre</option>
+        <option value="octubre">octubre</option>
+        <option value="Noviembre">Noviembre</option>
+        <option value="Diciembre">Diciembre</option>
+    </select>
+    <button class="btn btn-dark d-flex ms-3"><i class="bi bi-funnel"></i> Filtrar</button>
+</div>
+<hr class="border border-black ">
+<div class="row mb-3 ms-5 mt-4">
+    <div class="row mb-4">
+        <div class="col-sm-4 "  >
+            <div class="card card1 shadow" >
+                <div class="card-header text-center card3">Monto total vendido</div>
+                <div class="card-body text-secondary d-flex align-items-center">       
+                    <div class="col-7">
+                        <p class="card-text text-center text-dark  card2"><span>S/</span> 1560</p>
+                    </div>
+                    <div class="col-5  d-flex justify-content-center text-black" style="font-size: 50px;">
+                        <i class="bi bi-cash " ></i>
+                    </div>
+                </div>     
+            </div>  
+        </div>
+        <div class="col-sm-4 ">
+            <div class="card card4 shadow" >
+                <div class="card-header text-center card3 ">Cantidad de productos vendidos</div>
+                <div class="card-body text-secondary d-flex align-items-center">
+                    <div class="col-7">
+                        <p class="card-text text-center text-dark card2"> 125 cant</p>
+                    </div>
+                    <div class="col-5 d-flex justify-content-center text-black " style="font-size: 50px;">
+                        <i class="bi bi-check-lg"></i>
+                    </div>
+                </div>     
+            </div>  
+        </div>
+        <div class="col-sm-4 ">
+            <div class="card card5 shadow" >
+                <div class="card-header text-center card3">Producto más vendido</div>
+                <div class="card-body text-secondary d-flex align-items-center">
+                    <div class="col-7">
+                        <p class="card-text text-center text-dark card2"> Casaca jeans </p>
+                    </div>
+                    <div class="col-5 d-flex justify-content-center text-black" style="font-size: 50px;">
+                        <i class="bi bi-bag-fill"></i>                 
+                    </div>
+                </div>     
+            </div>  
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="row mb-4 mt-4">
+    <div class="form-group d-flex flex-column col-sm-4 mb-2 mb-sm-0 col-md-4 col-lg-6 shadow mt-4 ">
+        <div  class="d-flex flex-column h-100 mt-3">
+            <p class="mb-3 text-center ">5 productos más vendidos en el presente año</p>
+            <canvas id="5pmv"></canvas>
+        </div>
+    </div>
+    <div class="form-group d-flex flex-column col-sm-4 mb-2 mb-sm-0 col-md-4 col-lg-6 shadow mt-4" style="height: 400px;">
+        <div  class="d-flex flex-column h-100 mt-3">
+            <p class="mb-3 text-center ">5 productos menos vendidos en el presente año</p>
+            <canvas id="5pmv2"></canvas>
+        </div>
+    </div>
+    <div class="form-group d-flex flex-column col-sm-4 mb-2 mb-sm-0 col-md-4 col-lg-6 shadow" style="height: 400px;">
+        <div class="d-flex flex-column h-100">
+            <p class="mb-3 text-center">5 productos más vendidos en los últimos 5 meses</p>
+            <canvas id="5pmv3" ></canvas>
+        </div>
+    </div>
+    <div class="form-group d-flex col-sm-6   mb-2 mb-sm-0  col-md-4  col-lg-4 mt-5  shadow  ">
+        <div>
+            <p>En pastel las categorias más vendidas</p>
+            <canvas id="marcasmv2"></canvas>
+        </div>
+    </div>
+    <div class="form-group d-flex col-sm-6   mb-2 mb-sm-0  col-md-4  col-lg-6  mt-5 shadow">
+        <div>
+            <p>En pastel las  marcas más vendidas</p>
+            <canvas id="marcasmv3"></canvas>
+        </div>
+    </div>
+    <div class="form-group d-flex col-sm-6   mb-2 mb-sm-0  col-md-4  col-lg-6  mt-5 shadow">
+        <div>
+            <p>My ultimate</p>
+            <canvas id="ultimate" width="400" height="400" class="bg-dark"></canvas>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script>
+    var ctx = document.getElementById('5pmv2').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar', // Tipo de gráfico
+        data: {
+            labels: ['Producto A', 'Producto B', 'Producto C', 'Producto D', 'Producto E'], // Etiquetas del eje X
+            datasets: [{
+                label: 'Ventas',
+                data: [150, 120, 100, 80, 60], // Datos de ventas
+                backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de fondo de las barras
+                borderColor: 'rgba(54, 162, 235, 1)', // Color del borde de las barras
+                borderWidth: 1 // Ancho del borde
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true // Comenzar el eje Y en 0
+                }
+            }
+        }
+    });
+
+    var datos = ""
+    fetch('/s5pmv')
+    .then(response => response.json()) // Parsear la respuesta como JSON
+    .then(data => {
+        datos = JSON.stringify(data, null, 2);
+        datos = JSON.parse(datos);
+        var ctx = document.getElementById('5pmv').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar', // Tipo de gráfico
+            data: {
+                labels: datos.nombres,
+                datasets: [{
+                    data: datos.valores, // Datos de ventas
+                    backgroundColor: ['rgb(54, 162, 235)','rgb(222,142,235)'], // Color de fondo de las barras
+                    borderColor: 'rgba(54, 162, 235, 1)', // Color del borde de las barras
+                    borderWidth: 1 // Ancho del borde
+                }]
+            },
+            options: {
+                scales: {
+                },
+                plugins: {
+                    legend: {
+                        display: false // Ocultar la leyenda completa
+                    }
+                }
+            }
+        });
+    })
+    .catch(error => {
+        console.error('Hubo un problema con la solicitud fetch:', error);
+        // Manejar el error apropiadamente
+        alert('Hubo un error al obtener los datos.');
+    });
+
+
+    
+    var ctx = document.getElementById('5pmv3').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar', // Tipo de gráfico
+        data: {
+            labels: ['Producto A', 'Producto B', 'Producto C', 'Producto D', 'Producto E'], // Etiquetas del eje X
+            datasets: [{
+                label: 'Ventas',
+                data: [150, 120, 100, 80, 60], // Datos de ventas
+                backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de fondo de las barras
+                borderColor: 'rgba(54, 162, 235, 1)', // Color del borde de las barras
+                borderWidth: 1 // Ancho del borde
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true // Comenzar el eje Y en 0
+                }
+            }
+        }
+    });
+    //
+    var ctx = document.getElementById('marcasmv2').getContext('2d');
+            var myPieChart = new Chart(ctx, {
+                type: 'pie', // Tipo de gráfico circular (pastel)
+                data: {
+                    labels: ['Producto A', 'Producto B', 'Producto C', 'Producto D', 'Producto E'], // Etiquetas del gráfico
+                    datasets: [{
+                        label: 'Ventas',
+                        data: [150, 120, 100, 80, 60], // Datos de ventas
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.6)', // Color para Producto A
+                            'rgba(54, 162, 235, 0.6)', // Color para Producto B
+                            'rgba(255, 206, 86, 0.6)', // Color para Producto C
+                            'rgba(75, 192, 192, 0.6)', // Color para Producto D
+                            'rgba(153, 102, 255, 0.6)' // Color para Producto E
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)', // Borde para Producto A
+                            'rgba(54, 162, 235, 1)', // Borde para Producto B
+                            'rgba(255, 206, 86, 1)', // Borde para Producto C
+                            'rgba(75, 192, 192, 1)', // Borde para Producto D
+                            'rgba(153, 102, 255, 1)' // Borde para Producto E
+                        ],
+                        borderWidth: 1 // Ancho del borde
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top', // Posición de la leyenda
+                        }
+                    }
+                }
+            });
+        //
+        var ctx = document.getElementById('marcasmv3').getContext('2d');
+            var myPieChart = new Chart(ctx, {
+                type: 'pie', // Tipo de gráfico circular (pastel)
+                data: {
+                    labels: ['Producto A', 'Producto B', 'Producto C', 'Producto D', 'Producto E'], // Etiquetas del gráfico
+                    datasets: [{
+                        label: 'Ventas',
+                        data: [150, 120, 100, 80, 60], // Datos de ventas
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.6)', // Color para Producto A
+                            'rgba(54, 162, 235, 0.6)', // Color para Producto B
+                            'rgba(255, 206, 86, 0.6)', // Color para Producto C
+                            'rgba(75, 192, 192, 0.6)', // Color para Producto D
+                            'rgba(153, 102, 255, 0.6)' // Color para Producto E
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)', // Borde para Producto A
+                            'rgba(54, 162, 235, 1)', // Borde para Producto B
+                            'rgba(255, 206, 86, 1)', // Borde para Producto C
+                            'rgba(75, 192, 192, 1)', // Borde para Producto D
+                            'rgba(153, 102, 255, 1)' // Borde para Producto E
+                        ],
+                        borderWidth: 1 // Ancho del borde
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top', // Posición de la leyenda
+                        }
+                    }
+                }
+            });
+
+            let url  = '/getprconmas'
+            fetch(url)
+            .then(response => response.json() )
+            .then(datos => mostrar_datos(datos)) 
+            .catch (error => console.log(error))
+         
+            function mostrar_datos(datos){
+                //iteraremos sobre ese array osea datos, y por cada valor en el que estamos iterando queremos que haga algo
+                //en el json datos  por cada valor, mostraremos un alert
+                var name = [];
+                var valores = [];
+                datos.forEach(valor => {
+                    name.push(valor.nombre),
+                    valores.push(valor.precio)
+                }
+                );
+               var ctx = document.getElementById('ultimate').getContext('2d');
+                var myPieChart = new Chart(ctx, {
+                type: 'pie', // Tipo de gráfico circular (pastel)
+                data: {
+                    labels: name,
+                    datasets: [{
+                        label: 'Ventas',
+                        color: 'white',
+                        data:valores,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.6)', // Color para Producto A
+                            'rgba(54, 162, 235, 0.6)', // Color para Producto B
+                            'rgba(255, 206, 86, 0.6)', // Color para Producto C
+                            'rgba(75, 192, 192, 0.6)', // Color para Producto D
+                            'rgba(153, 102, 255, 0.6)' // Color para Producto E
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)', // Borde para Producto A
+                            'rgba(54, 162, 235, 1)', // Borde para Producto B
+                            'rgba(255, 206, 86, 1)', // Borde para Producto C
+                            'rgba(75, 192, 192, 1)', // Borde para Producto D
+                            'rgba(153, 102, 255, 1)' // Borde para Producto E
+                        ],
+                        borderWidth: 1 // Ancho del borde
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top', // Posición de la leyenda
+                        }
+                    }
+                }
+            });
+            }
+        fetch('/mostrar')
+            .then(valor => valor.json())
+            .then(valor => {
+                var valores  = []
+                var depa = []
+                valor.forEach(items => {
+                    valores.push(items.id);
+                    depa.push(items.departamento);
+                })
+                alert(valores + " " + depa)
+            })
+            .except(valor => alert("ocurrio un error de consulta"))
+
+   //  fetch nos permite acceder a los datos
+   //cuando retonra son promesas aun no podemos trabjarlos
+   // es solo una promesa ahí es donde viene el then que sería luego
+   // .then (response => response.json()) --> ese dato lo convierte en funcion anomnima y lo hace dato para poder leerlo retona por la flechita
+//.catch( error => console.log(error))
+
+</script>
+
+{% endblock %}
