@@ -1,0 +1,214 @@
+main{
+    font-family: Arial, sans-serif;
+}
+.lbbuscar{
+    /* Hace que el input ocupe todo el ancho disponible */
+padding: 10px;             /* Relleno interno */
+font-size: 0.8em;           /* Tamaño de la fuente */
+border: 1px solid #cad9ba;    /* Borde de color gris */
+   /* Bordes redondeados */
+box-sizing: border-box;
+padding-left: 40px;  
+padding-right: 100px;  
+background-color: #f2EEE3;
+border: none; 
+border-radius: 10px;  
+
+
+}
+
+.bus{
+align-items: left;
+text-align: left;
+padding-left: 20px;
+}
+
+
+.filt{
+    align-items: right;
+    text-align: right;
+    padding-left: 20px;
+    }
+
+    .filtro p{
+        font-weight: normal;
+        font-size: 0.9em;  
+        padding-top: 10px;
+    }
+
+    .filtro input{
+        background-color: #f2EEE3;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-weight: normal;
+        border: none; 
+        font-size: 0.9em;  
+        padding-top: 10px;
+        border-radius: 10px; 
+        color: gray;
+    }
+
+.produ p{
+    text-align: left;
+    font-size: 15px;
+}
+
+.linnea{
+    background-color: #cad9ba;
+    border: 0;
+    height: 3px; 
+    width: 50%; 
+    margin: 20px auto; 
+}
+
+.gray{
+    color: gray;
+    font-weight: 500; 
+}
+
+.grin{
+    color: #929d86;
+    font-weight: 600; 
+}
+
+.boll{
+    color: black;
+    font-weight: 600; 
+}
+
+
+  .btnc {
+    display: block; /* Esto coloca los botones uno debajo del otro */
+    margin: 5px 0;  /* Espacio entre los botones */
+    background-color: #4d594f; /* Color de fondo */
+    color: white;    /* Color del texto */
+    border: none;    /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px;  /* Tamaño del texto */
+    cursor: pointer;
+    margin-right: 0px;
+    width: 300px;
+    padding-top: 5px;
+    padding-left: 5px;
+    align-items: center;
+   
+
+}
+
+
+.cbotones button{
+    align-items: right;
+    padding: 5px;
+}
+
+.bt{
+    background-color: #4d594f;  /* Color de fondo */
+    color: white;      
+    border: none; 
+    border-radius: 5px;   
+    padding: 10px;   
+    padding-left: 20px;     
+    padding-right: 20px;
+    height: 50px;    
+    
+
+  }
+.btnc{
+    font-size: 15px;
+}
+
+
+
+  .cbotones{
+    align-items: right;
+    text-align: right;
+    padding-right: 5px;
+    display: flex;       /* Usamos Flexbox */
+    flex-direction: column;  /* Los elementos se apilan verticalmente */
+    align-items: flex-end;    /* Alinea los elementos al final del contenedor (a la derecha) */
+    max-width: 500px;    /* Ancho máximo para el contenedor */
+    margin: 0 auto;  
+    font-size: 5px;
+  }
+
+.fill cbotones{
+    align-items: right;
+}
+
+@media screen and (max-width: 768px) {
+    .lbbuscar {
+        padding-left: 20px;
+        padding-right: 30px;
+    }
+
+    .btnc {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .cbotones {
+        max-width: 100%;
+        margin: 0 10px;
+    }
+
+    .filt {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .filtro input {
+        font-size: 1em;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .produ p {
+        font-size: 14px;
+    }
+
+    .linnea {
+        width: 70%;
+    }
+
+    .btnc {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .lbbuscar {
+        padding-left: 15px;
+        padding-right: 20px;
+    }
+
+    .btnc {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .cbotones {
+        max-width: 100%;
+        margin: 0 5px;
+    }
+
+    .filtro input {
+        font-size: 0.9em;
+        padding: 5px;
+    }
+
+    .produ p {
+        font-size: 12px;
+    }
+
+    .linnea {
+        width: 90%;
+    }
+
+    .btnc {
+        font-size: 13px;
+    }
+}

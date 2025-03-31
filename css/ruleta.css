@@ -1,0 +1,178 @@
+.rul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin-bottom: 5px;
+    background-color: #f2EEE3;
+    margin-top: 0;
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+}
+
+main {
+    margin-top: 0;
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+}
+
+#ruleta {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid #004d00;
+    /* Verde oscuro */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.segmento {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    transform-origin: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+    /* Texto negro */
+}
+
+#boton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4D594F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#codigo {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #004d00;
+    /* Verde oscuro */
+}
+
+.mensaje {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    /* Texto negro para el mensaje */
+}
+
+.mensaje.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.titulop {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+main {
+    background-color: #f2EEE3;
+}
+
+.titulof {
+
+    background-color: #cad9ba;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.titulof p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.clm input {
+    align-items: center;
+
+}
+
+@media screen and (max-width: 768px) {
+    .rul {
+        padding: 10px;
+        height: auto;
+    }
+
+    #ruleta {
+        width: 250px;
+        height: 250px;
+    }
+
+    .segmento {
+        font-size: 14px;
+    }
+
+    #boton {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    #codigo {
+        font-size: 18px;
+    }
+
+    .mensaje {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rul {
+        padding: 5px;
+    }
+
+    #ruleta {
+        width: 200px;
+        height: 200px;
+    }
+
+    .segmento {
+        font-size: 12px;
+    }
+
+    #boton {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    #codigo {
+        font-size: 16px;
+    }
+
+    .mensaje {
+        font-size: 18px;
+    }
+
+    .titulop {
+        font-size: 18px;
+    }
+
+    .titulof {
+        font-size: 18px;
+    }
+
+    .clm input {
+        width: 100%;
+    }
+}

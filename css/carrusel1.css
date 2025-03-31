@@ -1,0 +1,187 @@
+.d-item{
+    height: 390px;
+    margin-top: 0;
+    margin: 0;
+  
+    
+}
+
+.d-img{
+    margin-top: 0;
+    margin: 0;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+.prod{
+    background-color:  #f2EEE3;
+    text-align: center;
+
+}
+.pp{
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+.qq{
+    text-align: center;
+    font-size: 20px;
+
+}
+
+
+
+main {
+    font-family: Arial, sans-serif;
+    margin-top: 0;
+    margin: 0;
+   
+
+}
+.fProductos{
+    background-color: #cad9ba ;
+
+}
+.imag{
+    align-items: center;
+    text-align: center;
+}
+
+
+.imag input[type="image"] {
+    width: 150px; /* Tamaño pequeño */
+    height: auto; /* Mantener proporción */
+    align-items: center;
+}
+
+.text-imagen {
+    
+    text-align: center; /* Centra el texto debajo de la imagen */
+    font-size: 14px; /* Tamaño del texto */
+    color: black; /* Color del texto */
+    font-weight: bold;
+    margin-top: 5px; /* Espacio entre imagen y texto */
+}
+
+
+.tit{
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+
+.products-grid{
+    justify-items: center;
+    align-items: center;
+    padding-left: 30px;
+
+}
+
+
+
+
+/* Centrar la fila que contiene los productos */
+.row.products {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    width: 100%; /* Asegura que la fila ocupe todo el ancho disponible */
+    align-items: center;
+}
+
+/* Cambiar el color de fondo de los botones */
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    background-color: #cad9ba; /* Color de fondo del ícono */
+}
+
+
+/* Estilos para la cuadrícula de productos */
+.products-grid {
+    justify-items: center;
+    margin-bottom: 40px;
+    align-items: center;
+    width: 100%; /* Establece el ancho de la cuadrícula al 75% de su contenedor */
+    display: grid; /* Utiliza el modelo de diseño Grid para distribuir los elementos */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Crea columnas automáticas, cada una con un ancho mínimo de 200px */
+    gap: 100px; /* Establece un espacio de 20px entre las celdas de la cuadrícula */
+}
+
+/* Estilos para cada tarjeta de producto */
+.product-card {
+    background-color: #F9F9F9; /* Fondo gris claro para las tarjetas */
+    padding: 20px; /* Agrega un relleno de 20px dentro de la tarjeta */
+    border-radius: 10px; /* Bordes redondeados con un radio de 10px */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad a la tarjeta */
+}
+
+/* Estilos para las imágenes de los productos dentro de la tarjeta */
+.product-card img {
+    width: 50%; /* La imagen ocupa el 100% del ancho del contenedor */
+    max-height: 300px; /* Limita la altura máxima de la imagen a 150px */
+    object-fit: cover; /* Mantiene la relación de aspecto mientras cubre el área del contenedor */
+    border-radius: 10px; /* Bordes redondeados en las imágenes */
+    margin-bottom: 15px; /* Espacio de 15px debajo de la imagen */
+}
+
+/* Estilos para el título principal de la tarjeta (nombre del producto) */
+.product-card h3 {
+    font-size: 1rem; /* Tamaño de fuente de 1rem */
+    margin-bottom: 10px; /* Espacio de 10px debajo del título */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+/* Estilos para el subtítulo (posiblemente el precio o categoría del producto) */
+.product-card h4 {
+    font-size: 1rem; /* Tamaño de fuente de 1rem */
+    margin-bottom: 10px; /* Espacio de 10px debajo del subtítulo */
+    color: #82857e; /* Color gris para el texto */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+/* Estilos para la descripción o detalles del producto */
+.product-card p {
+    font-size: 1rem; /* Tamaño de fuente de 1rem */
+    margin-bottom: 15px; /* Espacio de 15px debajo del párrafo */
+    color: #666; /* Color gris claro para el texto */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+/* Estilos para el botón dentro de la tarjeta */
+.product-card button {
+    padding: 10px 35px; /* Relleno de 10px arriba/abajo y 35px a los lados */
+    background-color: #4d594f; /* Fondo verde oscuro para el botón */
+    border: none; /* Sin borde alrededor del botón */
+    border-radius: 5px; /* Bordes redondeados en el botón */
+    cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa sobre el botón */
+    font-size: 1rem; /* Tamaño de fuente de 1rem */
+    color: white; /* Texto blanco dentro del botón */
+}
+
+/* Efecto cuando el botón se pasa sobre él (hover) */
+.product-card button:hover {
+    background-color: #898f83; /* Cambia el fondo del botón a un verde más claro */
+    color: #FFF; /* Mantiene el texto blanco */
+}
+
+/* Modificar el tamaño del carrusel */
+#productCarousel {
+    max-width: 80%;   /* Ajustar al 80% del ancho de la pantalla */
+    margin: 0 auto;   /* Centra el carrusel horizontalmente */
+}
+
+
+
+/* Ajustar el tamaño de las columnas dentro del carrusel (opcional) */
+.carousel-item .row {
+    margin-left: -15px;  /* Eliminar espacio innecesario a la izquierda */
+    margin-right: -15px; /* Eliminar espacio innecesario a la derecha */
+}
+
+/* Ajustar los márgenes de las tarjetas de producto */
+.product-card {
+    margin: 0 10px; /* Deja un pequeño margen entre los productos */
+}
+
+
+

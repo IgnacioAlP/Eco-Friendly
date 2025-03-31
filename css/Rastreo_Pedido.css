@@ -1,0 +1,365 @@
+/* Estilos generales para la página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2eee3;
+  /* Fondo de la página */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  padding-bottom: 20px;
+}
+
+main {
+  font-family: Arial, sans-serif;
+  background-color: #f2eee3;
+}
+
+/* Contenedor principal */
+.container {
+  width: 60%;
+  background-color: #CAD9BA;
+  /* Fondo del contenedor con color proporcionado */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: auto;
+}
+
+
+.title {
+  text-align: center;
+  background-color: #CAD9BA;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+  margin: -20px -20px 20px -20px;
+  font-size: 20px;
+  font-weight: none;
+}
+
+/* Barra de búsqueda */
+.searc-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.searc-bar input {
+  width: 60%;
+  padding: 8px;
+  border: 1px solid #2a3023;
+  /* Bordes con color proporcionado */
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.searc-bar button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #4d594f;
+  /* Fondo de los botones con el color proporcionado */
+  color: white;
+  /* Texto de los botones en blanco */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.searc-bar button:hover {
+  background-color: #797d74;
+  /* Color de hover para el botón */
+}
+
+/* Sección de la línea de tiempo del envío */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  background-color: #CAD9BA;
+  /* Fondo del contenedor con color proporcionado */
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.step {
+  text-align: right;
+}
+
+.step img {
+  width: 50px;
+  height: 50px;
+}
+
+.step p {
+  margin: 5px 0;
+  color: black;
+  /* Blanco para resaltar sobre el fondo */
+}
+
+.step span {
+  font-size: 0.9em;
+  color: gray;
+  /* Blanco para los tiempos */
+}
+
+/* Sección de rastreo de otro pedido */
+.new-searc {
+  /* Fija la posición relativa a su contenedor */
+  top: 110%;
+  /* Centrado vertical */
+  right: 30px;
+  /* Se separa del borde derecho */
+  transform: translateY(-50%);
+  /* Asegura el centrado vertical real */
+  width: 40%;
+  /* Ancho del panel */
+  text-align: left;
+  /* Alineación de texto */
+  background-color: #CAD9BA;
+  /* Fondo del panel */
+  padding: 25px;
+  border-radius: 10px;
+  align-items: right;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Contenedor de imagen y título */
+.image-title {
+  display: flex;
+  /* Usar flexbox para alinear los elementos */
+  align-items: center;
+  /* Alinear verticalmente los elementos */
+  gap: 15px;
+  /* Espacio entre la imagen y el título */
+}
+
+.new-searc h2 {
+  color: #4d594f;
+  /* Color del título */
+  margin: 0;
+  /* Eliminar margen inferior */
+  font-size: 1.5em;
+}
+
+.new-searc p {
+  margin: 5px 0;
+  color: black;
+  /* Color del texto */
+}
+
+.new-searc input {
+  width: 60%;
+  /* Ajustar el tamaño del campo de entrada */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  text-align: center;
+  /* Centrar el texto */
+}
+
+.new-searc button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #4d594f;
+  /* Fondo de los botones con el color proporcionado */
+  color: white;
+  /* Texto de los botones en blanco */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.new-searc button:hover {
+  background-color: #797d74;
+  /* Color de hover para el botón */
+}
+
+.tracking-icon {
+  width: 50px;
+  /* Tamaño de la imagen */
+  height: 50px;
+  border-radius: 50%;
+  /* Imagen redondeada */
+}
+
+.filar {
+  width: 80px;
+
+}
+
+.new-searc {
+  position: relative;
+  /* Esto asegura que el contenedor se coloque de forma relativa */
+  width: 40%;
+  /* Ancho del panel */
+  background-color: #CAD9BA;
+  /* Fondo del panel */
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-top: 30px;
+  /* Espacio superior para que no quede pegado al contenido anterior */
+  margin-right: 315px;
+  /* Alinea a la derecha */
+  margin-left: auto;
+  /* Esto asegura que se alinee a la derecha */
+}
+
+.image-title {
+  display: flex;
+  /* Usar flexbox para alinear los elementos */
+  align-items: center;
+  /* Alinear verticalmente los elementos */
+  gap: 15px;
+  /* Espacio entre la imagen y el título */
+}
+
+.new-searc h2 {
+  color: #4d594f;
+  /* Color del título */
+  margin: 0;
+  /* Eliminar margen inferior */
+  font-size: 1.5em;
+}
+
+.new-searc p {
+  margin: 5px 0;
+  color: black;
+  /* Color del texto */
+}
+
+.new-searc input {
+  width: 80%;
+  /* Ajustar el tamaño del campo de entrada */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  text-align: center;
+  /* Centrar el texto */
+}
+
+.new-searc button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4d594f;
+  /* Fondo de los botones con el color proporcionado */
+  color: white;
+  /* Texto de los botones en blanco */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.new-searc button:hover {
+  background-color: #797d74;
+  /* Color de hover para el botón */
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .container {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .searc-bar input {
+    width: 70%;
+  }
+
+  .searc-bar button {
+    padding: 6px 12px;
+  }
+
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .step {
+    text-align: center;
+  }
+
+  .new-searc {
+    width: 80%;
+    padding: 15px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .image-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .new-searc input {
+    width: 100%;
+  }
+
+  .new-searc button {
+    width: 100%;
+  }
+
+  .tracking-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .filar {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .searc-bar input {
+    width: 80%;
+  }
+
+  .searc-bar button {
+    padding: 5px 10px;
+  }
+
+  .new-searc {
+    width: 90%;
+    padding: 10px;
+    margin-top: 15px;
+  }
+
+  .new-searc input {
+    width: 100%;
+  }
+
+  .new-searc button {
+    width: 100%;
+  }
+
+  .image-title {
+    gap: 10px;
+  }
+
+  .tracking-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .filar {
+    width: 50px;
+  }
+}

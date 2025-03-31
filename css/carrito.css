@@ -1,0 +1,470 @@
+.titulop {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+main {
+  background-color: #f2EEE3;
+}
+
+.titulof {
+
+  background-color: #cad9ba;
+}
+
+.user img {
+
+  width: 65px;
+  padding-top: 10px;
+  align-items: right;
+
+}
+
+.infocuenta p {
+  margin-top: 0;
+  text-align: left;
+  line-height: 0.5;
+  font-size: 20px;
+
+
+}
+
+.perfil {
+  background-color: white;
+}
+
+.esp {
+  background-color: #f2EEE3;
+}
+
+main {
+  font-family: Arial, sans-serif;
+
+}
+
+.resumen {
+  text-align: center;
+}
+
+.carrito {
+  text-align: center;
+}
+
+
+
+.tit {
+  border: 1px solid white;
+  /* Borde negro de 1px */
+  background-color: #cad9ba;
+  /* Fondo gris claro */
+  padding: 10px;
+  /* Espacio interno (padding) */
+  text-align: center;
+  /* Alineación del texto en el centro */
+  font-weight: bold;
+  /* Negrita para el texto */
+}
+
+.produ {
+  border: 1px solid #cad9ba;
+  /* Borde negro de 1px */
+  background-color: white;
+  /* Fondo gris claro */
+  padding: 10px;
+  /* Espacio interno (padding) */
+  text-align: center;
+  padding-inline: 10px;
+
+
+
+
+}
+
+.nota {
+  text-align: left;
+  margin-left: 80px;
+  padding-left: 50px;
+}
+
+
+.btnlimpiar {
+  width: 200px;
+  /* Ancho del botón */
+  height: 40px;
+  /* Alto del botón */
+  font-size: 1em;
+  /* Tamaño de la fuente */
+  padding: 10px;
+  margin: 0;
+  background-color: #4d594f;
+  /* Color de fondo */
+  color: white;
+  /* Color del texto */
+  border: none;
+  /* Sin borde */
+  border-radius: 5px;
+  padding-left: 100px;
+  margin-left: 100px;
+  padding: 10px;
+  /* Espaciado dentro del contenedor */
+  box-sizing: border-box;
+  /* Bordes redondeados */
+
+
+}
+
+.imgcarrito img {
+  width: 100px;
+  height: auto;
+
+
+
+}
+
+.desc1 {
+  text-align: left;
+  padding-left: 30px;
+
+
+}
+
+.desc2 {
+  text-align: left;
+  padding-left: 30px;
+  color: #7e8774;
+}
+
+.oval-label {
+  display: inline-block;
+  /* Asegura que el label se ajuste al contenido */
+  padding: 10px 15px;
+  /* Espaciado interno para darle tamaño */
+  background-color: #4d594f;
+  /* Color de fondo */
+  color: white;
+  /* Color del texto */
+  border-radius: 25px;
+  /* Hace los bordes redondeados para crear el óvalo */
+  font-size: 16px;
+  /* Tamaño del texto */
+  font-weight: bold;
+  /* Negrita */
+  text-align: center;
+  align-items: center;
+}
+
+.btncompra {
+  width: 300px;
+  /* Ancho del botón */
+  height: 50px;
+  /* Alto del botón */
+  font-size: 1.2em;
+  /* Tamaño de la fuente */
+  padding: 10px;
+  margin: 0;
+  background-color: #4d594f;
+  /* Color de fondo */
+  color: white;
+  /* Color del texto */
+  border: none;
+  /* Sin borde */
+  border-radius: 5px;
+  width: 100%;
+  /* Hace que el contenedor ocupe todo el ancho de la pantalla */
+  padding: 10px;
+  /* Espaciado dentro del contenedor */
+  box-sizing: border-box;
+  /* Bordes redondeados */
+
+
+
+}
+
+.btndesc {
+  background-color: #4d594f;
+  /* Color de fondo */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 50px;
+  width: 100;
+
+}
+
+.lbcodigo {
+  /* Hace que el input ocupe todo el ancho disponible */
+  padding: 10px;
+  /* Relleno interno */
+  font-size: 1.2em;
+  /* Tamaño de la fuente */
+  border: 1px solid #cad9ba;
+  /* Borde de color gris */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  box-sizing: border-box;
+  padding-left: 40px;
+  background-color: #f2EEE3;
+
+
+
+}
+
+
+
+
+
+/* Estilo básico para el botón - Menu Desplegable*/
+.account-btn {
+  background-color: transparent;
+  /* Fondo transparente */
+  color: black;
+  /* Color del texto */
+  padding: 10px 15px;
+  /* Espaciado */
+  font-size: 16px;
+  border: 1px solid black;
+  /* Borde negro */
+  cursor: pointer;
+  /* Cambia el cursor al pasar sobre el botón */
+  display: flex;
+  /* Para alinear la imagen y el texto */
+  align-items: center;
+}
+
+/* Imagen dentro del botón */
+.account-btn img {
+  width: 20px;
+  /* Ajusta el tamaño de la imagen */
+  margin-right: 8px;
+  /* Espaciado entre la imagen y el texto */
+}
+
+/* Contenedor del menú desplegable */
+.dropdown {
+  position: relative;
+  /* Necesario para que el menú se posicione correctamente */
+}
+
+/* Estilo del menú desplegable */
+.dropdown-content {
+  display: none;
+  /* Ocultar el menú por defecto */
+  position: absolute;
+  background-color: #f3ece3;
+  /* Fondo del menú */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  /* Sombra ligera */
+  z-index: 1;
+  padding: 10px 0;
+  border: 1px solid #ddd;
+  /* Borde del menú */
+}
+
+/* Estilo de los enlaces en el menú */
+.dropdown-content a {
+  color: black;
+  /* Color del texto */
+  padding: 8px 16px;
+  /* Espaciado */
+  text-decoration: none;
+  display: block;
+}
+
+/* Cambiar el fondo a #ccc y color de texto a negro cuando pasa el cursor */
+.dropdown-content a:hover {
+  background-color: #ccc;
+  /* Fondo gris claro */
+  color: black;
+  /* Color de texto */
+}
+
+/* Mostrar el menú cuando el usuario pasa el cursor sobre el contenedor */
+.dropdown:hover .dropdown-content {
+  display: block;
+  /* Mostrar el menú al pasar el cursor */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ede9e0;
+  /* Fondo beige claro */
+  line-height: 1.6;
+}
+
+main {
+  background-color: #f2EEE3;
+  /* Fondo claro para el área principal */
+}
+
+/* Estilos para los títulos */
+.titulop {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.titulof {
+  background-color: #cad9ba;
+  /* Fondo verde claro */
+}
+
+/* Estilos para las imágenes de usuario */
+.user img {
+  width: 65px;
+  padding-top: 10px;
+  align-items: right;
+}
+
+/* Estilos de la información de cuenta */
+.infocuenta p {
+  margin-top: 0;
+  text-align: left;
+  line-height: 0.5;
+  font-size: 20px;
+}
+
+.perfil {
+  background-color: white;
+}
+
+.esp {
+  background-color: #f2EEE3;
+}
+
+/* Estilos para los botones */
+.btnlimpiar,
+.btncompra,
+.btndesc {
+  background-color: #4d594f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btnlimpiar {
+  width: 200px;
+  height: 40px;
+  margin-left: 100px;
+}
+
+.btncompra {
+  height: 50px;
+  font-size: 1.2em;
+}
+
+.btndesc {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 50px;
+  width: 100px;
+}
+
+/* Estilo de los productos */
+.produ {
+  border: 1px solid #cad9ba;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.desc1,
+.desc2 {
+  text-align: left;
+  padding-left: 30px;
+}
+
+.desc2 {
+  color: #7e8774;
+}
+
+/* Estilo del carrito y resumen */
+.carrito,
+.resumen {
+  text-align: center;
+}
+
+.nota {
+  text-align: left;
+  margin-left: 80px;
+  padding-left: 50px;
+}
+
+/* Estilo para el código de descuento */
+.lbcodigo {
+  padding: 10px;
+  font-size: 1.2em;
+  border: 1px solid #cad9ba;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding-left: 40px;
+  background-color: #f2EEE3;
+}
+
+/* Estilos para el menú desplegable */
+.account-btn {
+  background-color: transparent;
+  color: black;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.account-btn img {
+  width: 20px;
+  margin-right: 8px;
+}
+
+/* Contenedor del menú desplegable */
+.dropdown {
+  position: relative;
+}
+
+/* Estilo del menú desplegable */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f3ece3;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 10px 0;
+  border: 1px solid #ddd;
+}
+
+/* Enlaces dentro del menú desplegable */
+.dropdown-content a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Mostrar el menú al pasar el cursor */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
