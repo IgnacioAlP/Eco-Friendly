@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina de Inicio</title>
-    <link rel="stylesheet" href="css/carrusel1.css">
+    <title>{% block title %}Eco-Friendly{% endblock %}</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/blog.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
         <div class="logo">
             <form action="index.html" method="get">
                 <input type="image" alt="Eco-Friendly Logo" src="img/eco--.jpeg">
-              </form>
-          
+            </form>
             <h1>ECO - FRIENDLY</h1>
         </div>
         <div class="search-bar">
@@ -23,15 +24,11 @@
         </div>
         <div class="user-icons">
             <div class="dropdown">
-                <!-- Botón de Mi cuenta -->
                 <a href="Mi Cuenta.html">
                     <button class="account-btn">
                         <img src="img/usuario (1).png" alt="Mi cuenta"> Mi cuenta
                     </button>
                 </a>
-                
-                
-                <!-- Menú desplegable -->
                 <div class="dropdown-content">
                     <a href="InicioDeSesión.html">Iniciar sesión</a>
                     <a href="registrar.html">Registrarse</a>
@@ -42,268 +39,43 @@
             <a href="carrito.html">
                 <button class="icon-btn">
                     <img src="img/carrito-de-compras.png" alt="Carrito">
-                    <span id="cart-counter">0</span> <!-- Contador del carrito -->
+                    <span id="cart-counter">0</span>
                 </button>
             </a>
-            
-            
         </div>
     </header>
 
+    <!-- NAV -->
     <nav>
         <ul>
             <li><a href="acercaDe.html">Acerca de</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="#">Tienda</a></li>
             <li><a href="categorias.html">Categorías</a></li>
             <li><a href="ofertas.html">Ofertas</a></li>
             <li><a href="contacto.html">Contáctanos</a></li>
         </ul>
     </nav>
 
-    <main> 
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-    
-              <div class="carousel-item active d-item">
-                <img src="img/WhatsApp Image 2024-11-13 at 8.55.12 PM.jpeg" class="d-block w-100 d-img" alt="slider 1">
-                <div class = "carousel-caption top-0 mt-4">
-            
-                    <p class = "mt-5 fs-3 text-uppercase">
-                        TODA
-                    </p>
-                    <p class = "mt-5 fs-3 text-uppercase">
-                        La Naturaleza en tu Rutina Diaria 
-                    </p>
-                    <a href="categorias.html"> <button class = "btn-primary px-4 py-2 fs-5 mt-5">Explorar</button></a>
-                
-                </div>
-              </div>
-    
-              <div class="carousel-item d-item">
-                <img src="img/WhatsApp Image 2024-11-13 at 8.58.30 PM.jpeg" class="d-block w-100 d-img" alt="slider 1">
-                <div class = "carousel-caption top-0 mt-4">
-                    <p class = "mt-5 fs-3 text-uppercase">
-                        Descubre nuestras mejores ofertas en
-                    </p>
-                
-                    <h1 class= "display-1 fw-bolder text-capitalize">Productos Ecológicos</h1>
-                    <a href="ofertas.html"><button class = "btn-primary px-4 py-2 fs-5 mt-5">Ver</button></a>
-                </div>
-              </div>
-    
-              <div class="carousel-item d-item">
-                <img src="img/WhatsApp Image 2024-11-13 at 8.54.27 PM.jpeg" class="d-block w-100 d-img" alt="slider 1">
-                <div class = "carousel-caption top-0 mt-4">
-                    <p class = "mt-5 fs-3 text-uppercase">
-                        Gira y obtén los mejores descuentos en productos ecológicos
-                    </p>
-                    <h1 class= "display-1 fw-bolder text-capitalize">Solo en Eco Friendly</h1>
-                    <a href="paginaruleta.html">
-                        <button class = "btn-primary px-4 py-2 fs-5 mt-5">Ir</button>
-                    </a>
-                  
-                </div>
-              </div>
-              
-    
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Siguiente</span>
-            </button>
-          </div>
-    
-          <div class="main-icons">
-            <a href="#"><img src="img/ubicacion.png" alt="peru"></a>
-            <p class="letra">Envíos a Nivel Nacional</p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <a href="#"><img src="img/etiqueta-ecologica.png" alt="ecologica"></a>
-            <p class="letra">Productos Ecológicos</p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <a href="#"><img src="img/proteger.png" alt="comprasegura"></a>
-            <p class="letra" >Compra 100% Segura</p>
-        
-        </div>
-        <div class="row prod">
-            &nbsp;
-            <p class="pp">Lo más Nuevo</p>
-            <p class="qq">Descubre los mejores productos ecológicos</p>
-            <!-- Carrusel de Productos -->
-<div class="container mt-5">
-    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <!-- Fila de productos 1 -->
-            <div class="carousel-item active">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-sm-6 col-md-3 mb-4">
-                        <div class="product-card" id="producto3">
-                            <a href="detalle_producto.html"><img src="img/ini1.PNG" alt="Jabón Artesanal de Aceite de Oliva" id="imagen3"></a>
-                            <h4 id="vendedor3">Vendido por: Lamena</h4>
-                            <h3 id="nombre3">Tratamiento para cejas y pestañas - Lamena</h3>
-                            <p id="precio3">S/30.00</p>
-                            <button class="add-to-cart" data-id="producto3" data-vendor="Vendido por: Lamena" data-name="Tratamiento de Cejas y pestañas - Lamena" data-price="30.00">Añadir al carrito</button>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 mb-4">
-                        <div class="product-card" id="producto1">
-                            <a href="detalle_producto.html"><img src="img/ini2.PNG" alt="Jabón biodegradable Multiusos" id="imagen1"></a>
-                            <h4 id="vendedor1">Vendido por: Torna</h4>
-                            <h3 id="nombre1">Jabón Biodegradable Multiusos 305gr - Torna by Calo</h3>
-                            <p id="precio1">S/15.00</p>
-                            <button class="add-to-cart" data-id="producto1" data-vendor="Vendido por: Torna" data-name="Jabón Biodegradable Multiusos 305gr" data-price="15.00">Añadir al carrito</button>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 mb-4">
-                        <div class="product-card" id="producto2">
-                            <a href="detalle_producto.html"><img src="img/ini3.PNG" alt="Jabón de manos ecológico" id="imagen2"></a>
-                            <h4 id="vendedor2">Vendido por: Biogar</h4>
-                            <h3 id="nombre2">Jabón de manos ecológico - Biogar</h3>
-                            <p id="precio2">S/25.00</p>
-                            <button class="add-to-cart" data-id="producto2" data-vendor="Vendido por: Biogar" data-name="Jabón de manos ecológico - Biogar" data-price="25.00">Añadir al carrito</button>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 mb-4">
-                        <div class="product-card" id="producto4">
-                            <a href="detalle_producto.html"> <img src="img/ini4.PNG" alt="Acondicionador Líquido - Par Par" id="imagen4"></a>
-                            <h4 id="vendedor4">Vendido por: Par Par</h4>
-                            <h3 id="nombre4">Acondicionador Liquido - Par Par</h3>
-                            <p id="precio4">S/30.00</p>
-                            <button class="add-to-cart" data-id="producto4" data-vendor="Vendido por: Par Par" data-name="Acondicionador Liquido - Par Par" data-price="30.00">Añadir al carrito</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        {% block content %}
+        <!-- Aquí irá el contenido específico de cada página -->
+        {% endblock %}
+    </main>
 
-            <!-- Fila de productos 2 (puedes agregar más productos aquí) -->
-            <div class="carousel-item">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-sm-6 col-md-3 mb-4">
-                        <div class="product-card" id="producto3">
-                            <a href="detalle_producto.html"><img src="img/ini1.PNG" alt="Jabón Artesanal de Aceite de Oliva" id="imagen3"></a>
-                            <h4 id="vendedor3">Vendido por: Lamena</h4>
-                            <h3 id="nombre3">Tratamiento para cejas y pestañas - Lamena</h3>
-                            <p id="precio3">S/30.00</p>
-                            <button class="add-to-cart" data-id="producto3" data-vendor="Vendido por: Lamena" data-name="Tratamiento de Cejas y pestañas - Lamena" data-price="30.00">Añadir al carrito</button>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 mb-4">
-                        <div class="product-card" id="producto1">
-                            <a href="detalle_producto.html"><img src="img/ini2.PNG" alt="Jabón biodegradable Multiusos" id="imagen1"></a>
-                            <h4 id="vendedor1">Vendido por: Torna</h4>
-                            <h3 id="nombre1">Jabón Biodegradable Multiusos 305gr - Torna by Calo</h3>
-                            <p id="precio1">S/15.00</p>
-                            <button class="add-to-cart" data-id="producto1" data-vendor="Vendido por: Torna" data-name="Jabón Biodegradable Multiusos 305gr" data-price="15.00">Añadir al carrito</button>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 mb-4">
-                        <div class="product-card" id="producto2">
-                            <a href="detalle_producto.html"><img src="img/ini3.PNG" alt="Jabón de manos ecológico" id="imagen2"></a>
-                            <h4 id="vendedor2">Vendido por: Biogar</h4>
-                            <h3 id="nombre2">Jabón de manos ecológico - Biogar</h3>
-                            <p id="precio2">S/25.00</p>
-                            <button class="add-to-cart" data-id="producto2" data-vendor="Vendido por: Biogar" data-name="Jabón de manos ecológico - Biogar" data-price="25.00">Añadir al carrito</button>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 mb-4">
-                        <div class="product-card" id="producto4">
-                            <a href="detalle_producto.html"> <img src="img/ini4.PNG" alt="Acondicionador Líquido - Par Par" id="imagen4"></a>
-                            <h4 id="vendedor4">Vendido por: Par Par</h4>
-                            <h3 id="nombre4">Acondicionador Liquido - Par Par</h3>
-                            <p id="precio4">S/30.00</p>
-                            <button class="add-to-cart" data-id="producto4" data-vendor="Vendido por: Par Par" data-name="Acondicionador Liquido - Par Par" data-price="30.00">Añadir al carrito</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Controles del carrusel -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <br>
-</div>
-
-        </div>
-
-    
-
-        <div class="row">
-            <div class="fProductos">
-                <br>
-                <p class="pp">Categorías</p>
-                <p class="qq">Productos eológicos para el aseo personal</p>
-                <div class="row imag">
-                    <div class="col-3">
-                        <input type="image" src="img/Leonardo_Phoenix_A_serene_and_natural_aesthetic_showcasing_one_0.jpg">
-                        <p class="tit">Cuerpo</p>
-    
-                    </div>
-                    <div class="col-2">
-                        <input type="image" src="img/Leonardo_Phoenix_A_serene_and_natural_aesthetic_showcasing_one_1.jpg">
-                        <p class="tit">Cabello</p>
-
-                    </div>
-                    <div class="col-2">
-                        <input type="image" src="img/Leonardo_Phoenix_A_vibrant_and_colorful_arrangement_of_various_0.jpg">
-                        <p class="tit">Rostro</p>
-    
-                    </div>
-                    <div class="col-2">
-                        <input type="image" src="img/Leonardo_Phoenix_A_vibrant_and_colorful_arrangement_of_various_3.jpg">
-                        <p class="tit">Accesorios</p>
-    
-                    </div>
-                    <div class="col-3">
-                        <input type="image" src="img/Leonardo_Phoenix_A_vibrant_and_harmonious_stilllife_compositio_1.jpg">
-                        <p class="tit">Higiene</p>
-                    </div>
-
-                </div>
-                <br>
-               
-            </div>
-            
-
-        </div>
-       
-
-
-
-        </main>
-
-
-
-
+    <!-- FOOTER -->
     <hr class="linea">
     <footer>
-        
-        <div class ="footer_logo">
+        <div class="footer_logo">
             <img src="img/eco-friendly.jpeg" alt="Eco-Friendly Footer Logo">
         </div>
-
-        <hr class="linea">
-        <br>
-        
+        <hr class="linea"><br>
         <div class="social-media">
             <h2>Siguenos en:</h2>
-            <a href="https://www.facebook.com"><img src="img/facebook.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com"><img src="img/instagram.png" alt="Instagram"></a>
-            <a href="https://www.youtube.com"><img src="img/youtube.png" alt="YouTube"></a>
-            <a href="https://www.tiktok.com"><img src="img/tik-tok.png" alt="TikTok"></a>
+            <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="img/youtube.png" alt="YouTube"></a>
+            <a href="#"><img src="img/tik-tok.png" alt="TikTok"></a>
         </div>
 
         <div class="footer-info">
@@ -324,7 +96,7 @@
             <div>
                 <h4>Contacto:</h4>
                 <p>Eco_friendly@gmail.com</p>
-                <p>Escríbenos al WhatsApp +51 923 542 938</p>
+                <p>WhatsApp: +51 923 542 938</p>
                 <p>Envíos Nacionales - Perú</p>
                 <p><a href="contacto.html">Contáctanos</a></p>
             </div>
@@ -332,17 +104,13 @@
 
         <div class="row">
             <div class="footer-bottom">
-                <p>Copyright &copy; Eco-Friendly 2024 | Todos los derechos reservados.</p>
+                <p>&copy; Eco-Friendly 2024 | Todos los derechos reservados.</p>
             </div>
-        
         </div>
-        
-      
-       
     </footer>
 
-
-    <script src="js/bootstrap.min.js"> </script>
+    <!-- SCRIPTS -->
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/añadiralcarrito.js"></script>
 
