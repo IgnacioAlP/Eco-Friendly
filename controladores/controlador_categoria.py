@@ -1,74 +1,74 @@
 
 from bd import obtener_conexion
 
-def nombre_productos():
+def nombre_categorias():
     conexion = obtener_conexion()
-    productos = []
+    categorias = []
     with conexion.cursor() as cursor:
-        cursor.execute("SELECT producto FROM producto order by producto asc")
-        productos = cursor.fetchall()
+        cursor.execute("SELECT categoria FROM categoria order by categoria asc")
+        categorias = cursor.fetchall()
     conexion.close()
-    return productos
+    return categorias
 
-def nombre_producto_por_id(id_producto):
+def nombre_categoria_por_id(id_categoria):
     conexion = obtener_conexion()
-    nombre_producto = None
+    nombre_categoria = None
     with conexion.cursor() as cursor:
-        cursor.execute("SELECT producto FROM producto WHERE id = %s", (id_producto,))
+        cursor.execute("SELECT categoria FROM categoria WHERE id = %s", (id_categoria,))
         resultado = cursor.fetchone()
         if resultado:
-            nombre_producto = resultado[0]
+            nombre_categoria = resultado[0]
     conexion.close()
-    return nombre_producto
+    return nombre_categoria
 
 
-def id_producto_por_nombre(nombre_producto):
+def id_categoria_por_nombre(nombre_categoria):
     conexion = obtener_conexion()
-    id_producto = None
+    id_categoria = None
     with conexion.cursor() as cursor:
-        cursor.execute("SELECT id FROM producto WHERE producto = %s", (nombre_producto,))
+        cursor.execute("SELECT id FROM categoria WHERE categoria = %s", (nombre_categoria,))
         resultado = cursor.fetchone()
         if resultado:
-            id_producto = resultado[0]
+            id_categoria = resultado[0]
     conexion.close()
-    return id_producto
+    return id_categoria
 
 
-def insertar_producto(producto):
+def insertar_categoria(categoria):
     conexion = obtener_conexion()
     with conexion.cursor() as cursor:
-        cursor.execute('INSERT INTO producto (producto) VALUES (%s)', (producto,))
+        cursor.execute('INSERT INTO categoria (categoria) VALUES (%s)', (categoria,))
     conexion.commit()
     conexion.close()
 
-def obtener_productos():
+def obtener_categorias():
     conexion = obtener_conexion()
-    productos = []
+    categorias = []
     with conexion.cursor() as cursor:
-        cursor.execute("SELECT id, producto FROM producto")
-        productos = cursor.fetchall()
+        cursor.execute("SELECT id, categoria FROM categoria")
+        categorias = cursor.fetchall()
     conexion.close()
-    return productos
+    return categorias
 
-def eliminar_producto(id):
+def eliminar_categoria(id):
     conexion = obtener_conexion()
     with conexion.cursor() as cursor:
-        cursor.execute("DELETE FROM producto WHERE id  = %s", (id,))
+        cursor.execute("DELETE FROM categoria WHERE id  = %s", (id,))
     conexion.commit()
     conexion.close()
 
-def obtener_producto_por_id(id):
+def obtener_categoria_por_id(id):
     conexion = obtener_conexion()
-    producto = None
+    categoria = None
     with conexion.cursor() as cursor:
-        cursor.execute("SELECT id, producto FROM producto WHERE id = %s", (id,))
-        producto = cursor.fetchone()
+        cursor.execute("SELECT id, categoria FROM categoria WHERE id = %s", (id,))
+        categoria = cursor.fetchone()
     conexion.close()
-    return producto
+    return categoria
 
-def actualizar_producto(id, producto):
+def actualizar_categoria(id, categoria):
     conexion = obtener_conexion()
     with conexion.cursor() as cursor:
-        cursor.execute("UPDATE producto SET producto = %s WHERE id = %s", (producto, id))
+        cursor.execute("UPDATE categoria SET categoria = %s WHERE id = %s", (categoria, id))
     conexion.commit()
     conexion.close()
