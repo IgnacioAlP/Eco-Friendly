@@ -1,12 +1,12 @@
-class clsCategoria:
+class clsproducto:
     id = 0
-    categoria = ""
-    diccategoria = {}
+    producto = ""
+    dicproducto = {}
 
-    def __init__(self,p_id,p_categoria):
+    def __init__(self,p_id,p_producto):
         self.id = p_id
-        self.categoria = p_categoria
-        self.diccategoria={
+        self.producto = p_producto
+        self.dicproducto={
             "id": p_id,
-            "categoria"  : p_categoria
+            "producto"  : p_producto
         } 
