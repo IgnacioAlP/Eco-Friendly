@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from controladores import controlador_categoria
 from controladores import controlador_marca
-from controladores import controlador_categoria
+from controladores import controlador_producto
 app = Flask(__name__)
 
 @app.route('/ini')
@@ -19,7 +19,27 @@ def acerca_de():
     return render_template('/acerca_de.html')
 
 
-#-------categoria------#
+#-----INICIO-USUARIO-----#
+@app.route("/inicio_sesion")
+def inicio_sesion():
+    email = request.form['email']
+    password = request.form['password']
+
+@app.route("/registrar_usuario")
+def registrar_usuario():
+    try:
+        nombre = request.form['nombre']
+        ape_paterno = request.form['ape_paterno']
+        ape_materno = request.form['ape_materno']
+        email = request.form['email']
+        password = request.form['password']
+        return
+    except:
+        raise
+#-----FIN-USUARIO-----#
+
+
+#-----INICIO-CATEGORIA-----#
 @app.route('/categoria')
 def categoria():
     categorias = controlador_categoria.obtener_categorias()
@@ -54,9 +74,9 @@ def actualizar_categoria():
     categoria = request.form['categoria']
     controlador_categoria.actualizar_categoria(id, categoria)
     return redirect(url_for('categoria'))
+#------FIN-CATEGORIA-----#
 
-
-#-------MARCA------#
+#-----INICIO-MARCA-----#
 
 @app.route('/marca')
 def marca():
@@ -91,9 +111,9 @@ def actualizar_marca():
     marca = request.form['marca']
     controlador_marca.actualizar_marca(id,marca)
     return redirect('marca')
+#-----FIN-MARCA-----#
 
-
-#-------producto------#
+#-----INICIO-PRODUCTO-----#
 @app.route('/producto')
 def producto():
     productos = controlador_producto.obtener_productos()
@@ -151,6 +171,11 @@ def actualizar_producto():
     producto = request.form['producto']
     controlador_producto.actualizar_producto(id, producto)
     return redirect(url_for('producto'))
+#-----FIN-PRODUCTO-----#
+
+
+
+
 
 
 

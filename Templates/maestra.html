@@ -30,8 +30,8 @@
                     </button>
                 </a>
                 <div class="dropdown-content">
-                    <a href="InicioDeSesión.html">Iniciar sesión</a>
-                    <a href="registrar.html">Registrarse</a>
+                    <a href="{{ url_for('inicio_sesion') }}">Iniciar sesión</a>
+                    <a href="{{ url_for('registrar_usuario') }}">Registrarse</a>
                 </div>
             </div>
             <a href="favoritos.html"><button class="icon-btn"><img src="/static/img/favorito.png" alt="Favoritos"></button></a> 
