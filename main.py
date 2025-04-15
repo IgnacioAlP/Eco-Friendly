@@ -8,12 +8,6 @@ app = Flask(__name__)
 def ini():
     return  render_template('maestra.html')
 
-
-@app.route('/inicio')
-def index():
-    return render_template('/templates/index.html')
-
-
 @app.route('/acerca_de')
 def acerca_de():
     return render_template('/acerca_de.html')
