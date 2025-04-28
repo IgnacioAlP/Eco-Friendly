@@ -1,0 +1,44 @@
+{% extends "maestra.html" %}
+
+{% block title %}Registrar Detalle de Presentación | Eco-Friendly{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="mb-4 mt-4">Agregar Detalle Producto</h3>
+                <form action="{{ url_for('insertar_detallepresentacion') }}" method="post" onsubmit=" validarFormulario(event)">
+                    <div class="mb-3">
+                        <label for="producto" class="form-label">Producto</label>
+                        <select class="form-select" id="producto" name="producto" required>
+                            {% for producto in productos %}
+                                <option value="{{ producto[0] }}">{{ producto[1] }}</option>
+                            {% endfor %}
+                        </select>    
+                    </div>
+                    <div class="mb-3">
+                        <label for="presentacion" class="form-label">presentacion</label>
+                        <select class="form-select" id="presentacion" name="presentacion" required>
+                            {% for presentacion in presentaciones %}
+                                <option value="{{ presentacion[0] }}">{{ presentacion[1] }} - {{ presentacion[2] }}</option>
+                            {% endfor %}
+                        </select>    
+                    </div>
+                    <div class="mb-3">
+                        <label for="stock" class="form-label">Stock:</label>
+                        <input required type="number"  class="form-control" id="stock" name="stock" placeholder="Ingrese el Stock del producto">
+                    </div>
+                    <hr>
+                    <div class="text-end">
+                        <a href="{{ url_for('detallepresentacion') }}" class="btn btn-danger mt-2 me-2" onclick="volver(event)">Volver</a>
+                        <button type="submit" class="btn btn-primary mt-2">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
