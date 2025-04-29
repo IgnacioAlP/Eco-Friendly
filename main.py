@@ -77,7 +77,7 @@ def marca():
     marcas = controlador_marca.obtener_marcas()
     return render_template('marca.html', marcas=marcas)
 
-@app.route('/registrarmarca')
+@app.route('/registrar_marca')
 def registrar_marca():
     return render_template('registrar_marca.html')
 
