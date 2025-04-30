@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="col-lg-4  col-md-7 ms-5 mt-4 me-4">
-    <a href="{{ url_for('registrar_producto') }}" class="btn btn-primary ">Nuevo</a>
+    <a href="{{ url_for('registrar_categoria') }}" class="btn btn-primary ">Nuevo</a>
     <hr>
     <table class="table table-bordered table-hover text-center table-responsive ">
         <thead class="table-secondary">
@@ -15,17 +15,17 @@
             </tr>
         </thead>
         <tbody>
-            {% for producto in productos %}
+            {% for categoria in categorias %}
             <tr>
-                <td>{{ producto[0] }}</td>
-                <td>{{ producto[1] }}</td>
+                <td>{{ categoria[0] }}</td>
+                <td>{{ categoria[1] }}</td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Acciones">
-                        <form action="{{ url_for('modificar_producto') }}"  method="post">
-                            <input type="hidden" name="id" value="{{ producto[0] }}">
+                        <form action="{{ url_for('modificar_categoria') }}"  method="post">
+                            <input type="hidden" name="id" value="{{ categoria[0] }}">
                             <button type="submit" class="btn btn-warning me-4 text-white" onclick=" modificar(event)">Modificar</button>
                         </form>
-                        <a href="{{ url_for('eliminar_producto', id=producto[0]) }}" class="btn btn-danger" onclick=" confirmarEliminacion(event)">Eliminar</a>
+                        <a href="{{ url_for('eliminar_categoria', id=categoria[0]) }}" class="btn btn-danger" onclick=" confirmarEliminacion(event)">Eliminar</a>
                     </div>
                 </td>
             </tr>

@@ -47,8 +47,17 @@ def ubicanos():
 
 
 
-@app.route('/registrarusuario', methods=['POST'])
-def registrarusuario():
+
+
+##--NO TOCASDE AQUI HACIA ABAJO--#
+
+#-----INICIO-USUARIO-----#
+@app.route("/inicio_sesion")
+def inicio_sesion():
+    return render_template('categoria.html')
+
+@app.route('/registrar_usuario', methods=['POST'])
+def registrar_usuario():
     tipo = request.form["tipo"]
     nombre = request.form["nombre"]
     apellidos = request.form["apellidos"]
@@ -61,26 +70,6 @@ def registrarusuario():
     controlador_usuario.insertar_usuario(dni, apellidos, nombre, telefono, email, usuario, contraseña, estado, tipo)
 
     return redirect('/ini')
-
-##--NO TOCASDE AQUI HACIA ABAJO--#
-
-#-----INICIO-USUARIO-----#
-@app.route("/inicio_sesion")
-def inicio_sesion():
-    email = request.form['email']
-    password = request.form['password']
-
-@app.route("/registrar_usuario")
-def registrar_usuario():
-    try:
-        nombre = request.form['nombre']
-        ape_paterno = request.form['ape_paterno']
-        ape_materno = request.form['ape_materno']
-        email = request.form['email']
-        password = request.form['password']
-        return
-    except:
-        raise
 #-----FIN-USUARIO-----#
 
 
@@ -96,7 +85,7 @@ def registrar_categoria():
 
 @app.route('/insertar_categoria', methods=['POST'])
 def insertar_categoria():
-    categoria = request.form['nombre']
+    categoria = request.form['categoria']
     controlador_categoria.insertar_categoria(
         categoria=categoria
     )
@@ -165,8 +154,8 @@ def producto():
     return render_template('producto.html', productos=productos)
 
 
-@app.route('/registrarproducto')
-def registrarproducto():
+@app.route('/registrar_producto')
+def registrar_producto():
     datos = {
         'tipo_productos' : controlador_tipoproducto.nombres_tipoproducto(),
         'generos': controlador_genero.nombre_generos(),
