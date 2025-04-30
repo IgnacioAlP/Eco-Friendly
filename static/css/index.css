@@ -1,14 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 
-}
-
-body {
-    font-family: Arial, sans-serif;
-
-}
 
 header {
     display: flex;
@@ -130,7 +120,7 @@ footer p {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #f5f5f5;
     line-height: 1.6;
 }

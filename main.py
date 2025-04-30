@@ -2,16 +2,67 @@ from flask import Flask, render_template, request, redirect, url_for, flash, jso
 from clases import clase_categoria as clscat
 from controladores import controlador_categoria,controlador_dashboard,controlador_tipo_usuario,controlador_detallepresentacion,controlador_envio,controlador_genero,controlador_grupoedad,controlador_marca,controlador_transaccion,controlador_presentacion,controlador_producto,controlador_tipoproducto,controlador_usuario, controlador_distrito, controlador_departamento, controlador_provincia
 import os, json
+
 app = Flask(__name__)
 
+#---RUTAS FIJAS---#
+@app.route('/')
 @app.route('/ini')
 def ini():
     return  render_template('maestra.html')
 
+@app.route('/inicio')
+def index():
+    return render_template('/templates/index.html')
+
+
 @app.route('/acerca_de')
 def acerca_de():
-    return render_template('/acerca_de.html')
+    return render_template('/templates/acerca_de.html')
 
+@app.route('/libro_de_reclamaciones')
+def libro_de_reclamaciones():
+    return render_template('/templates/libro_de_reclamaciones.html')
+
+
+
+
+@app.route('/monto_envio/<string:departamento>/<string:provincia>/<string:distrito>', methods=['POST'])
+def monto_envio(departamento, provincia, distrito):
+    dato = controlador_envio.direccion_envio(distrito, provincia, departamento)
+    return jsonify(dato)
+    
+
+@app.route('/preguntas_frecuentes')
+def preguntas_frecuentes():
+    return render_template('/templates/centrodeayuda.html')
+
+@app.route('/registro_de_usuario')
+def registro_de_usuario():
+    return render_template('/templates/registrar.html')
+
+@app.route('/ubicanos')
+def ubicanos():
+    return render_template('/templates/ubicanos.html')
+
+
+
+@app.route('/registrarusuario', methods=['POST'])
+def registrarusuario():
+    tipo = request.form["tipo"]
+    nombre = request.form["nombre"]
+    apellidos = request.form["apellidos"]
+    dni = request.form["dni"]
+    telefono = request.form["telefono"]
+    email = request.form["email"]
+    contraseña = request.form["contraseña"]
+    usuario = ''
+    estado = "Activo"
+    controlador_usuario.insertar_usuario(dni, apellidos, nombre, telefono, email, usuario, contraseña, estado, tipo)
+
+    return redirect('/ini')
+
+##--NO TOCASDE AQUI HACIA ABAJO--#
 
 #-----INICIO-USUARIO-----#
 @app.route("/inicio_sesion")

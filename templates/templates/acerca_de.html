@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="logo">
-            <form action="index.html" method="get">
+            <form action="{{ url_for('inicio') }}" method="get">
                 <input type="image" alt="Eco-Friendly Logo" src="/static/img/eco--.jpeg">
               </form>
           
@@ -55,7 +55,7 @@
 
     <nav>
         <ul>
-            <li><a href="acercaDe.html">Acerca de</a></li>
+            <li><a href="{{ url_for('acerca_de') }}" target="_self">Acerca de</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="productos.html">Categorías</a></li>
             <li><a href="ofertas.html">Ofertas</a></li>
@@ -130,8 +130,8 @@
             </div>
             <div>
                 <h4>Sobre nosotros:</h4>
-                <p><a href="acercaDe.html">Historia</a></p>
-                <p><a href="acercaDe.html">Misión y Visión</a></p>
+                <p><a href="{{ url_for('acerca_de') }}" target="_self">Historia</a></p>
+                <p><a href="{{ url_for('acerca_de') }}" target="_self">Misión y Visión</a></p>
                 <p><a href="blog.html">Blog</a></p>
                 <p><a href="centrodeayuda.html">Centro de ayuda</a></p>
             </div>
