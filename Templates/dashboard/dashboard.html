@@ -14,7 +14,7 @@
         </div>
         <div class="user-info">
             <span class="username">Juan Pérez</span>
-            <a href="#" class="inicio-btn">Inicio</a>
+            <a href="{{ url_for('index') }}" class="inicio-btn">Inicio</a>
         </div>
     </header>
 
@@ -26,9 +26,15 @@
                     <li><a href="{{ url_for('categoria') }}">Categorías</a></li>
                     <li><a href="{{ url_for('marca') }}">Marcas</a></li>
                     <li><a href="{{ url_for('producto') }}">Productos</a></li>
-                    <li><a href="{{ url_for('producto') }}">Modelos</a></li>
-                    <li><a href="{{ url_for('producto') }}">Pedidos</a></li>
-                    <li><a href="{{ url_for('producto') }}">Usuarios</a></li>
+                    <li><a href="{{ url_for('tipo_producto') }}">Tipos productos</a></li>
+                    <li><a href="{{ url_for('departamento') }}">Departamentos</a></li>
+                    <li><a href="{{ url_for('provincia') }}">Provincias</a></li>
+                    <li><a href="{{ url_for('distrito') }}">Distritos</a></li>
+                    <li><a href="{{ url_for('envio') }}">Envios</a></li>
+                    <li><a href="{{ url_for('grupo_edad') }}">Grupo Edad</a></li>
+                    <li><a href="{{ url_for('pedido') }}">Pedidos</a></li>
+                    <li><a href="{{ url_for('comprobante') }}">Comprobantes</a></li>
+                    <li><a href="{{ url_for('usuario') }}">Usuarios</a></li>
                     <li><a href="{{ url_for('resumen') }}">Permisos</a></li>
                 </ul>
             </nav>

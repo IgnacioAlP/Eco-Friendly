@@ -1,0 +1,28 @@
+{% extends "maestra.html" %}
+
+{% block title %}Inicio | ECO FRIENDLY{% endblock %}
+
+{% block content %}
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            </div>
+            <div class="carousel-inner">
+    
+                <div class="carousel-item active d-item">
+                    <img src="/static/img/Sin línea.jpg" class="d-block w-100 d-img" alt="slider 1">
+                    <div class = "carousel-caption top-0 mt-4">
+                
+                        <p id="tituloindex"class = "mt-5 fs-3 text-uppercase" style="color: #1a423a; font-size: 50px;">
+                            ECOLOGICAL PRODUCTS
+                        </p>
+                        <p id="tituloindex" class = "mt-5 fs-3 text-uppercase" style="color: #1a423a;font-size: 25px;">
+                            TODA LA NATURALEZA EN TUS MANOS 
+                        </p>
+                        <a href="productos.html"> <button class = "btn-primary px-4 py-2 fs-5 mt-5" style="color: #1a423a; background-color: #c7d5c0;">Explorar</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+    

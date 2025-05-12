@@ -1,0 +1,27 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}Marcas | Blog-Friendly{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="mb-4 mt-4">Modificar Marca</h3>
+                <form action="{{ url_for('actualizar_marca') }}" method="post">
+                    <input type="hidden" name="id" value="{{ marca[0] }}">
+                    <div class="mb-3">
+                        <label for="marca" class="form-label">Marca:</label>
+                        <input required type="text" class="form-control" id="marca" name="marca" value="{{ marca[1] }}">
+                    </div>
+                    <hr>
+                    <div class="text-end">
+                        <a href="{{ url_for('marca') }}" class="btn btn-danger mt-2 me-2" onclick=" confirmarCancelacion(event)">Cancelar</a>
+                        <button type="submit" class="btn btn-primary mt-2" onclick=" confirmarModificacion(event)">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

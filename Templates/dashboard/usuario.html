@@ -1,0 +1,55 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}Usuario | Eco-Friendly{% endblock %}
+
+{% block content %}
+<div class="col-lg-4 col-md-7 ms-5 mt-4 me-4">
+    <h2>Usuarios</h2><br>
+    <hr>
+    <table class="table table-bordered table-hover text-center table-responsive">
+        <thead class="table-secondary">
+            <tr>
+                <th>Documento</th>
+                <th>Apellidos</th>
+                <th>Nombres</th>
+                <th>Telefono</th>
+                <th>Correo</th>
+                <th>Tipo usuario</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{ usuario[1] }}</td>
+                <td>{{ usuario[2] }}</td>
+                <td>{{ usuario[3] }}</td>
+                <td>{{ usuario[4] }}</td>
+                <td>{{ usuario[5] }}</td>
+                <td>
+                    {% if usuario[7] == 1 %}
+                        Administrador
+                    {% elif usuario[7] == 2 %}
+                        Cliente
+                    {% else %}
+                        Otro
+                    {% endif %}
+                </td>
+                <td>{{ usuario[6] }}</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Acciones">
+                        <form action="{{ url_for('modificar_usuario') }}" method="post">
+                            <input type="hidden" name="id" value="{{ usuario[0] }}">
+                            <button type="submit" class="btn btn-warning me-4 text-white" onclick=" modificar(event)">Modificar</button>
+                        </form>
+                        <a href="{{ url_for('eliminar_usuario', id=usuario[0]) }}" class="btn btn-danger" onclick=" confirmarEliminacion(event)">Eliminar</a>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

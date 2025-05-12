@@ -13,7 +13,7 @@
     <!-- HEADER -->
     <header>
         <div class="logo">
-            <form action="{{ url_for('ini') }}" method="get">
+            <form action="{{ url_for('index') }}" method="get">
                 <input type="image" alt="Eco-Friendly Logo" src="/static/img/eco--.jpeg">
             </form>
             <h1>ECO - FRIENDLY</h1>
@@ -32,6 +32,7 @@
                 <div class="dropdown-content">
                     <a href="{{ url_for('inicio_sesion') }}">Iniciar sesión</a>
                     <a href="{{ url_for('registrar_usuario') }}">Registrarse</a>
+                    <a href="{{ url_for('resumen') }}">Dashboard</a>
                 </div>
             </div>
             <a href="favoritos.html"><button class="icon-btn"><img src="/static/img/favorito.png" alt="Favoritos"></button></a> 
